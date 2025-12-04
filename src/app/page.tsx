@@ -28,6 +28,13 @@ export default function Home() {
     const handleScroll = () => {
       const sections = ['about', 'experience', 'projects', 'blog'];
       const scrollPosition = window.scrollY + window.innerHeight / 3;
+      
+      // Check if we're at the bottom of the page - if so, activate blog
+      const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 100;
+      if (isAtBottom) {
+        setActiveSection('blog');
+        return;
+      }
 
       for (const section of sections) {
         const element = document.getElementById(section);
