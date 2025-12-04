@@ -133,13 +133,13 @@ export default function Home() {
                 <h3 className={styles.experienceTitle}>
                   Software Engineer 2 · Southeastern Grocers
                 </h3>
-                <p className={styles.experienceDescription}>
-                  Responsible for building AI-driven features with Azure AI Foundry to optimize tools used by store associates. 
-                  Responsible for Developing, testing, and maintain cross-platform mobile and desktop applications using C# and .NET MAUI. 
-                  Build and maintain efficient back-end services and APIs using .NET technologies. 
-                  Debug and resolve issues in C# .NET MAUI applications, ensuring optimal performance across platforms. 
-                  Participate in Agile/Scrum processes, including sprint planning and standups, to ensure timely delivery of features.
-                </p>
+                <ul className={styles.experienceDescription}>
+                  <li>Responsible for building AI-driven features with Azure AI Foundry to optimize tools used by store associates.</li>
+                  <li>Develop, test, and maintain cross-platform mobile and desktop applications using C# and .NET MAUI.</li>
+                  <li>Build and maintain efficient back-end services and APIs using .NET technologies.</li>
+                  <li>Debug and resolve issues in C# .NET MAUI applications, ensuring optimal performance across platforms.</li>
+                  <li>Participate in Agile/Scrum processes, including sprint planning and standups, to ensure timely delivery of features.</li>
+                </ul>
                 <div className={styles.techTags}>
                   <span className={styles.tag}>Azure AI Foundry</span>
                   <span className={styles.tag}>C#</span>
@@ -159,12 +159,12 @@ export default function Home() {
                 <h3 className={styles.experienceTitle}>
                   Software Engineer · Southeastern Grocers
                 </h3>
-                <p className={styles.experienceDescription}>
-                  Assisted in developing, testing, and maintaining applications using C# and .NET technologies. 
-                  Built user interfaces with XAML to deliver intuitive application designs. 
-                  Worked closely with QA teams to identify and fix bugs during the testing phase. 
-                  Performed routine maintenance tasks and applied updates to existing applications.
-                </p>
+                <ul className={styles.experienceDescription}>
+                  <li>Assisted in developing, testing, and maintaining applications using C# and .NET technologies.</li>
+                  <li>Built user interfaces with XAML to deliver intuitive application designs.</li>
+                  <li>Worked closely with QA teams to identify and fix bugs during the testing phase.</li>
+                  <li>Performed routine maintenance tasks and applied updates to existing applications.</li>
+                </ul>
                 <div className={styles.techTags}>
                   <span className={styles.tag}>C#</span>
                   <span className={styles.tag}>.NET</span>
@@ -182,11 +182,11 @@ export default function Home() {
                 <h3 className={styles.experienceTitle}>
                   Web Developer · Blu Decimal
                 </h3>
-                <p className={styles.experienceDescription}>
-                  Collaborated with clients to gather requirements, define project scope, and deliver customized web solutions. 
-                  Wrote clean, maintainable, and scalable code using HTML, CSS, JavaScript, and frameworks like React. 
-                  Offered ongoing website maintenance, updates, and technical support.
-                </p>
+                <ul className={styles.experienceDescription}>
+                  <li>Collaborated with clients to gather requirements, define project scope, and deliver customized web solutions.</li>
+                  <li>Wrote clean, maintainable, and scalable code using HTML, CSS, JavaScript, and frameworks like React.</li>
+                  <li>Offered ongoing website maintenance, updates, and technical support.</li>
+                </ul>
                 <div className={styles.techTags}>
                   <span className={styles.tag}>React</span>
                   <span className={styles.tag}>JavaScript</span>
