@@ -134,8 +134,6 @@ export default function Home() {
 
       {/* Right Content Area */}
       <main className={styles.main}>
-        {/* Translucent top bar */}
-        <div className={styles.topBar}></div>
         <div className={styles.content}>
           {/* About Section */}
           <section id="about" className={styles.section}>
