@@ -148,7 +148,7 @@ export default function Home() {
               As a software engineer, I specialize in building scalable mobile desktop and web applications  that solve real business challenges. I focus on creating solutions that are not only technically sound but also drive tangible results for organizations and their users.
             </p>
             <p className={styles.bioText}>
-              My expertise spans the full application development lifecycle, from design to implementation to deployment and optimization. I strive to build and deliver software that teams can rely on, clean minimal and easy to use.
+              My expertise spans the full application development lifecycle, from design to implementation to deployment and optimization. I strive to build and deliver software that teams can rely on that is <span className={styles.highlight}>clean, minimal</span> and easy to use.
             </p>
             <p className={styles.bioText}>
               Throughout my career, I&apos;ve worked with diverse teams and technologies, building everything from <span className={styles.highlight}>customer-facing web applications</span> to <span className={styles.highlight}>internal enterprise mobile applications</span> that run on specialized hardware like <span className={styles.highlight}>Zebra devices</span>. I thrive in environments where collaboration drives excellence, and where every line of code contributes to a larger vision.
