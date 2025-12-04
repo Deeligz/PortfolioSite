@@ -134,6 +134,8 @@ export default function Home() {
 
       {/* Right Content Area */}
       <main className={styles.main}>
+        {/* Translucent top bar */}
+        <div className={styles.topBar}></div>
         <div className={styles.content}>
           {/* About Section */}
           <section id="about" className={styles.section}>
@@ -159,7 +161,7 @@ export default function Home() {
                   Software Engineer 2 · Southeastern Grocers
                 </h3>
                 <ul className={styles.experienceDescription}>
-                  <li>Responsible for building AI-driven features with Azure AI Foundry to optimize tools used by store associates.</li>
+                  <li>Responsible for building and maintaining AI-driven applications utilizing Azure AI Foundry that is used by store associates to increase productivity and efficiency.</li>
                   <li>Develop, test, and maintain cross-platform mobile and desktop applications using C# and .NET MAUI.</li>
                   <li>Build and maintain efficient back-end services and APIs using .NET technologies.</li>
                   <li>Debug and resolve issues in C# .NET MAUI applications, ensuring optimal performance across platforms.</li>

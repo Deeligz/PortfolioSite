@@ -146,6 +146,26 @@
   width: 50%;
   min-height: 100vh;
   padding: 100px 50px 50px 50px;
+  position: relative;
+}
+
+.topBar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(
+    to bottom,
+    var(--background) 0%,
+    var(--background) 40%,
+    rgba(248, 249, 250, 0.9) 70%,
+    rgba(248, 249, 250, 0) 100%
+  );
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 100;
+  pointer-events: none;
 }
 
 .content {
