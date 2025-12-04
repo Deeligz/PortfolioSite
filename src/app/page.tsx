@@ -6,21 +6,29 @@ import styles from "./page.module.css";
 export default function Home() {
   const [activeSection, setActiveSection] = useState('about');
 
-  // Handle scroll on page load - scroll to section if hash exists, otherwise scroll to top
+  // Handle scroll on page load - scroll to section if coming from a subpage, otherwise scroll to top
   useEffect(() => {
     const hash = window.location.hash;
-    if (hash) {
-      // If there's a hash, scroll to that section
+    const referrer = document.referrer;
+    const isFromSubpage = referrer && (referrer.includes('/projects/') || referrer.includes('/blog/'));
+    
+    if (hash && isFromSubpage) {
+      // Coming from a subpage with hash - scroll to that section
       const sectionId = hash.replace('#', '');
       const element = document.getElementById(sectionId);
       if (element) {
         setTimeout(() => {
           element.scrollIntoView({ behavior: 'smooth' });
+          // Clear the hash from URL after scrolling
+          window.history.replaceState(null, '', window.location.pathname);
         }, 100);
       }
     } else {
-      // No hash, scroll to top
+      // Direct visit or refresh - scroll to top and clear hash
       window.scrollTo(0, 0);
+      if (hash) {
+        window.history.replaceState(null, '', window.location.pathname);
+      }
     }
   }, []);
 
