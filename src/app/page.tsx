@@ -138,6 +138,7 @@ export default function Home() {
                   <li>Develop, test, and maintain cross-platform mobile and desktop applications using C# and .NET MAUI.</li>
                   <li>Build and maintain efficient back-end services and APIs using .NET technologies.</li>
                   <li>Debug and resolve issues in C# .NET MAUI applications, ensuring optimal performance across platforms.</li>
+                  <li>Upgraded and maintained internal company portal built on WordPress platform.</li>
                   <li>Participate in Agile/Scrum processes, including sprint planning and standups, to ensure timely delivery of features.</li>
                 </ul>
                 <div className={styles.techTags}>
