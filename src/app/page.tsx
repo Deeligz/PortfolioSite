@@ -233,40 +233,103 @@ export default function Home() {
 
           {/* Projects Section - Coming Soon */}
           <section id="projects" className={styles.section}>
-            <div className={styles.comingSoonOverlay}>
-              <span className={styles.comingSoonBadge}>Coming Soon</span>
-            </div>
-            
-            {/* Skeleton Project Items */}
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className={styles.skeletonProjectItem}>
-                <div className={styles.skeletonImage}></div>
-                <div className={styles.skeletonContent}>
-                  <div className={styles.skeletonTitle}></div>
-                  <div className={styles.skeletonText}></div>
-                  <div className={styles.skeletonText}></div>
-                  <div className={styles.skeletonTags}>
-                    <div className={styles.skeletonTag}></div>
-                    <div className={styles.skeletonTag}></div>
-                    <div className={styles.skeletonTag}></div>
+            <div className={styles.comingSoonWrapper}>
+              <div className={styles.comingSoonContent}>
+                {/* Actual Project Items (blurred behind) */}
+                <div className={styles.projectItem}>
+                  <div className={styles.projectImage}>
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&h=200&fit=crop" alt="Inventory Management System" />
+                  </div>
+                  <div className={styles.projectContent}>
+                    <h3 className={styles.projectTitle}>Inventory Management System</h3>
+                    <p className={styles.projectDescription}>
+                      Enterprise mobile application for real-time inventory tracking and management.
+                    </p>
+                    <div className={styles.techTags}>
+                      <span className={styles.tag}>React Native</span>
+                      <span className={styles.tag}>TypeScript</span>
+                      <span className={styles.tag}>SQLite</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className={styles.projectItem}>
+                  <div className={styles.projectImage}>
+                    <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=400&h=200&fit=crop" alt="Shelf Scanning Application" />
+                  </div>
+                  <div className={styles.projectContent}>
+                    <h3 className={styles.projectTitle}>Shelf Scanning Application</h3>
+                    <p className={styles.projectDescription}>
+                      Mobile solution for retail shelf auditing and compliance checks.
+                    </p>
+                    <div className={styles.techTags}>
+                      <span className={styles.tag}>React Native</span>
+                      <span className={styles.tag}>Computer Vision</span>
+                      <span className={styles.tag}>Azure</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className={styles.projectItem}>
+                  <div className={styles.projectImage}>
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=200&fit=crop" alt="Price Checker App" />
+                  </div>
+                  <div className={styles.projectContent}>
+                    <h3 className={styles.projectTitle}>Price Checker App</h3>
+                    <p className={styles.projectDescription}>
+                      Customer-facing mobile app enabling instant price verification.
+                    </p>
+                    <div className={styles.techTags}>
+                      <span className={styles.tag}>React Native</span>
+                      <span className={styles.tag}>Firebase</span>
+                      <span className={styles.tag}>GraphQL</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className={styles.projectItem}>
+                  <div className={styles.projectImage}>
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop" alt="Intranet Site" />
+                  </div>
+                  <div className={styles.projectContent}>
+                    <h3 className={styles.projectTitle}>Intranet Site</h3>
+                    <p className={styles.projectDescription}>
+                      Internal company portal for centralized access to resources.
+                    </p>
+                    <div className={styles.techTags}>
+                      <span className={styles.tag}>React</span>
+                      <span className={styles.tag}>.NET</span>
+                      <span className={styles.tag}>SQL Server</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            ))}
+              
+              {/* Translucent Overlay */}
+              <div className={styles.comingSoonOverlay}>
+                <span className={styles.comingSoonBadge}>Coming Soon</span>
+              </div>
+            </div>
           </section>
 
           {/* Blog Section - Coming Soon */}
           <section id="blog" className={styles.section}>
-            <div className={styles.comingSoonOverlay}>
-              <span className={styles.comingSoonBadge}>Coming Soon</span>
-            </div>
-            
-            {/* Skeleton Blog Item */}
-            <div className={styles.skeletonBlogItem}>
-              <div className={styles.skeletonDate}></div>
-              <div className={styles.skeletonTitle}></div>
-              <div className={styles.skeletonText}></div>
-              <div className={styles.skeletonText} style={{ width: '60%' }}></div>
+            <div className={styles.comingSoonWrapper}>
+              <div className={styles.comingSoonContent}>
+                {/* Actual Blog Item (blurred behind) */}
+                <div className={styles.blogItem}>
+                  <span className={styles.blogDate}>December 2024</span>
+                  <h3 className={styles.blogTitle}>Building AI-Powered Applications: A Practical Guide</h3>
+                  <p className={styles.blogDescription}>
+                    Insights from building AI-powered enterprise applications that deliver real business value.
+                  </p>
+                </div>
+              </div>
+              
+              {/* Translucent Overlay */}
+              <div className={styles.comingSoonOverlay}>
+                <span className={styles.comingSoonBadge}>Coming Soon</span>
+              </div>
             </div>
           </section>
 
