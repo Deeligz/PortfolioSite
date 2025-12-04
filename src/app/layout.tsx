@@ -66,9 +66,12 @@ export const metadata: Metadata = {
     google: "your-google-verification-code",
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/Tea.png', type: 'image/png' },
+    ],
     shortcut: '/favicon.ico',
-    apple: '/favicon.ico',
+    apple: '/Tea.png',
   },
 };
 
@@ -81,8 +84,9 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/Tea.png" type="image/png" />
         <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/Tea.png" />
         <link rel="canonical" href="https://www.danieloyieke.com" />
         <meta name="author" content="Daniel Oyieke" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

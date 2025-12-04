@@ -156,10 +156,11 @@ export default function Home() {
                   <li>Build and maintain efficient back-end services and APIs using .NET technologies.</li>
                   <li>Debug and resolve issues in C# .NET MAUI applications, ensuring optimal performance across platforms.</li>
                   <li>Upgraded and maintained internal company portal built on WordPress platform.</li>
-                  <li>Participate in Agile/Scrum processes, including sprint planning and standups, to ensure timely delivery of features.</li>
+                  <li>Participate in Agile/Scrum processes using Azure DevOps, including sprint planning and standups, to ensure timely delivery of features.</li>
                 </ul>
                 <div className={styles.techTags}>
                   <span className={styles.tag}>Azure AI Foundry</span>
+                  <span className={styles.tag}>Azure DevOps</span>
                   <span className={styles.tag}>C#</span>
                   <span className={styles.tag}>.NET MAUI</span>
                   <span className={styles.tag}>.NET</span>
