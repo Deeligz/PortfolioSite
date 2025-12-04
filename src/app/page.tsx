@@ -231,110 +231,43 @@ export default function Home() {
             </a>
           </section>
 
-          {/* Projects Section */}
+          {/* Projects Section - Coming Soon */}
           <section id="projects" className={styles.section}>
-            <a href="/projects/inventory-management" className={styles.projectItem}>
-              <div className={styles.projectImage}>
-                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&h=200&fit=crop" alt="Inventory Management System" />
-              </div>
-              <div className={styles.projectContent}>
-                <h3 className={styles.projectTitle}>
-                  Inventory Management System
-                  <svg className={styles.externalLink} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                </h3>
-                <p className={styles.projectDescription}>
-                  Enterprise mobile application for real-time inventory tracking and management. Built for warehouse operations with offline capabilities, barcode scanning, and seamless data synchronization.
-                </p>
-                <div className={styles.techTags}>
-                  <span className={styles.tag}>React Native</span>
-                  <span className={styles.tag}>TypeScript</span>
-                  <span className={styles.tag}>SQLite</span>
-                  <span className={styles.tag}>REST API</span>
+            <div className={styles.comingSoonOverlay}>
+              <span className={styles.comingSoonBadge}>Coming Soon</span>
+            </div>
+            
+            {/* Skeleton Project Items */}
+            {[1, 2, 3, 4].map((i) => (
+              <div key={i} className={styles.skeletonProjectItem}>
+                <div className={styles.skeletonImage}></div>
+                <div className={styles.skeletonContent}>
+                  <div className={styles.skeletonTitle}></div>
+                  <div className={styles.skeletonText}></div>
+                  <div className={styles.skeletonText}></div>
+                  <div className={styles.skeletonTags}>
+                    <div className={styles.skeletonTag}></div>
+                    <div className={styles.skeletonTag}></div>
+                    <div className={styles.skeletonTag}></div>
+                  </div>
                 </div>
               </div>
-            </a>
-
-            <a href="/projects/shelf-scanning" className={styles.projectItem}>
-              <div className={styles.projectImage}>
-                <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=400&h=200&fit=crop" alt="Shelf Scanning Application" />
-              </div>
-              <div className={styles.projectContent}>
-                <h3 className={styles.projectTitle}>
-                  Shelf Scanning Application
-                  <svg className={styles.externalLink} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                </h3>
-                <p className={styles.projectDescription}>
-                  Mobile solution for retail shelf auditing and compliance checks. Features computer vision integration, automated reporting, and real-time analytics for store operations teams.
-                </p>
-                <div className={styles.techTags}>
-                  <span className={styles.tag}>React Native</span>
-                  <span className={styles.tag}>Computer Vision</span>
-                  <span className={styles.tag}>Azure</span>
-                  <span className={styles.tag}>Node.js</span>
-                </div>
-              </div>
-            </a>
-
-            <a href="/projects/price-checker" className={styles.projectItem}>
-              <div className={styles.projectImage}>
-                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=200&fit=crop" alt="Price Checker App" />
-              </div>
-              <div className={styles.projectContent}>
-                <h3 className={styles.projectTitle}>
-                  Price Checker App
-                  <svg className={styles.externalLink} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                </h3>
-                <p className={styles.projectDescription}>
-                  Customer-facing mobile app enabling instant price verification through barcode scanning. Integrated with real-time pricing databases and supports multiple store locations and promotional pricing.
-                </p>
-                <div className={styles.techTags}>
-                  <span className={styles.tag}>React Native</span>
-                  <span className={styles.tag}>Barcode Scanner</span>
-                  <span className={styles.tag}>Firebase</span>
-                  <span className={styles.tag}>GraphQL</span>
-                </div>
-              </div>
-            </a>
-
-            <a href="/projects/intranet-site" className={styles.projectItem}>
-              <div className={styles.projectImage}>
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop" alt="Intranet Site" />
-              </div>
-              <div className={styles.projectContent}>
-                <h3 className={styles.projectTitle}>
-                  Intranet Site
-                  <svg className={styles.externalLink} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                </h3>
-                <p className={styles.projectDescription}>
-                  Internal company portal providing employees with centralized access to resources, announcements, tools, and documentation. Features role-based access control and seamless integration with existing systems.
-                </p>
-                <div className={styles.techTags}>
-                  <span className={styles.tag}>React</span>
-                  <span className={styles.tag}>TypeScript</span>
-                  <span className={styles.tag}>.NET</span>
-                  <span className={styles.tag}>SQL Server</span>
-                </div>
-              </div>
-            </a>
-
-            <a href="/projects" className={styles.viewMoreLink}>
-              View Full Project Archive
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
+            ))}
           </section>
 
-          {/* Blog Section */}
+          {/* Blog Section - Coming Soon */}
           <section id="blog" className={styles.section}>
-            <a href="/blog/building-ai-applications" className={styles.blogItem}>
-              <span className={styles.blogDate}>December 2024</span>
-              <h3 className={styles.blogTitle}>
-                Building AI-Powered Applications: A Practical Guide
-                <svg className={styles.externalLink} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-              </h3>
-              <p className={styles.blogDescription}>
-                Insights from building AI-powered enterprise applications that deliver real business value. Learn key principles for successful AI implementations.
-              </p>
-            </a>
+            <div className={styles.comingSoonOverlay}>
+              <span className={styles.comingSoonBadge}>Coming Soon</span>
+            </div>
+            
+            {/* Skeleton Blog Item */}
+            <div className={styles.skeletonBlogItem}>
+              <div className={styles.skeletonDate}></div>
+              <div className={styles.skeletonTitle}></div>
+              <div className={styles.skeletonText}></div>
+              <div className={styles.skeletonText} style={{ width: '60%' }}></div>
+            </div>
           </section>
 
           <footer className={styles.footer}>
