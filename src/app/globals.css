@@ -58,3 +58,37 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-muted);
 }
+
+/* Global Top Blur Bar - Only on content area, not sidebar */
+.topBlurBar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(
+    to bottom,
+    var(--background) 0%,
+    var(--background) 30%,
+    rgba(248, 249, 250, 0.8) 60%,
+    rgba(248, 249, 250, 0) 100%
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 100;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .topBlurBar {
+    left: 0;
+    height: 60px;
+    background: linear-gradient(
+      to bottom,
+      var(--background) 0%,
+      var(--background) 20%,
+      rgba(248, 249, 250, 0.8) 50%,
+      rgba(248, 249, 250, 0) 100%
+    );
+  }
+}

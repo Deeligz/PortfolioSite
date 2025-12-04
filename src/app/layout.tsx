@@ -141,7 +141,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <div className="topBlurBar"></div>
+        {children}
+      </body>
     </html>
   );
 }
