@@ -185,13 +185,14 @@ export default function Home() {
                 <ul className={styles.experienceDescription}>
                   <li>Collaborated with clients to gather requirements, define project scope, and deliver customized web solutions.</li>
                   <li>Wrote clean, maintainable, and scalable code using HTML, CSS, JavaScript, and frameworks like React.</li>
+                  <li>Used WordPress as a content management system to maintain and update client sites.</li>
                   <li>Offered ongoing website maintenance, updates, and technical support.</li>
                 </ul>
                 <div className={styles.techTags}>
                   <span className={styles.tag}>React</span>
                   <span className={styles.tag}>JavaScript</span>
                   <span className={styles.tag}>HTML & CSS</span>
-                  <span className={styles.tag}>Web Development</span>
+                  <span className={styles.tag}>WordPress</span>
                 </div>
               </div>
             </div>
