@@ -147,6 +147,7 @@ export default function Home() {
                   <span className={styles.tag}>.NET MAUI</span>
                   <span className={styles.tag}>.NET</span>
                   <span className={styles.tag}>REST APIs</span>
+                  <span className={styles.tag}>WordPress</span>
                   <span className={styles.tag}>Agile/Scrum</span>
                 </div>
               </div>
