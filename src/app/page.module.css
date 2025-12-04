@@ -88,8 +88,8 @@
 .navLine {
   display: inline-block;
   width: 32px;
-  height: 1px;
-  background-color: var(--text-muted);
+  height: 0;
+  border-top: 1px solid var(--text-muted);
   margin-right: 16px;
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   flex-shrink: 0;
@@ -106,7 +106,7 @@
 .nav button:hover .navLine,
 .nav button.active .navLine {
   width: 64px;
-  background-color: var(--text-primary);
+  border-top-color: var(--text-primary);
 }
 
 .nav button:hover .navText,
