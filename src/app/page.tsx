@@ -127,71 +127,71 @@ export default function Home() {
           <section id="experience" className={styles.section}>
             <div className={styles.experienceItem}>
               <div className={styles.experienceHeader}>
-                <span className={styles.experienceDate}>2024 — PRESENT</span>
+                <span className={styles.experienceDate}>2023 — PRESENT</span>
               </div>
               <div className={styles.experienceContent}>
                 <h3 className={styles.experienceTitle}>
-                  Senior Frontend Engineer, Accessibility · Company Name
-                  <svg className={styles.externalLink} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  Software Engineer 2 · Southeastern Grocers
                 </h3>
                 <p className={styles.experienceDescription}>
-                  Build and maintain critical components used to construct Company&apos;s
-                  frontend, across the whole product. Work closely with cross-functional teams,
-                  including developers, designers, and product managers, to implement and
-                  advocate for best practices in web accessibility.
+                  Responsible for building AI-driven features with Azure AI Foundry to optimize tools used by store associates. 
+                  Responsible for Developing, testing, and maintain cross-platform mobile and desktop applications using C# and .NET MAUI. 
+                  Build and maintain efficient back-end services and APIs using .NET technologies. 
+                  Debug and resolve issues in C# .NET MAUI applications, ensuring optimal performance across platforms. 
+                  Participate in Agile/Scrum processes, including sprint planning and standups, to ensure timely delivery of features.
                 </p>
                 <div className={styles.techTags}>
-                  <span className={styles.tag}>JavaScript</span>
-                  <span className={styles.tag}>TypeScript</span>
-                  <span className={styles.tag}>React</span>
-                  <span className={styles.tag}>Storybook</span>
+                  <span className={styles.tag}>Azure AI Foundry</span>
+                  <span className={styles.tag}>C#</span>
+                  <span className={styles.tag}>.NET MAUI</span>
+                  <span className={styles.tag}>.NET</span>
+                  <span className={styles.tag}>REST APIs</span>
+                  <span className={styles.tag}>Agile/Scrum</span>
                 </div>
               </div>
             </div>
 
             <div className={styles.experienceItem}>
               <div className={styles.experienceHeader}>
-                <span className={styles.experienceDate}>2018 — 2024</span>
+                <span className={styles.experienceDate}>2022 — 2023</span>
               </div>
               <div className={styles.experienceContent}>
                 <h3 className={styles.experienceTitle}>
-                  Lead Engineer · Previous Company
-                  <svg className={styles.externalLink} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  Software Engineer · Southeastern Grocers
                 </h3>
                 <p className={styles.experienceDescription}>
-                  Build, style, and ship high-quality websites, design systems, mobile apps,
-                  and digital experiences for a diverse array of projects for clients including
-                  Harvard Business School, Everlane, Pratt Institute, and many more.
+                  Assisted in developing, testing, and maintaining applications using C# and .NET technologies. 
+                  Built user interfaces with XAML to deliver intuitive application designs. 
+                  Worked closely with QA teams to identify and fix bugs during the testing phase. 
+                  Performed routine maintenance tasks and applied updates to existing applications.
                 </p>
                 <div className={styles.techTags}>
-                  <span className={styles.tag}>React</span>
-                  <span className={styles.tag}>React Native</span>
-                  <span className={styles.tag}>SCSS</span>
-                  <span className={styles.tag}>WordPress</span>
-                  <span className={styles.tag}>JavaScript</span>
+                  <span className={styles.tag}>C#</span>
+                  <span className={styles.tag}>.NET</span>
+                  <span className={styles.tag}>XAML</span>
+                  <span className={styles.tag}>QA Testing</span>
                 </div>
               </div>
             </div>
 
             <div className={styles.experienceItem}>
               <div className={styles.experienceHeader}>
-                <span className={styles.experienceDate}>2016 — 2018</span>
+                <span className={styles.experienceDate}>2020 — 2022</span>
               </div>
               <div className={styles.experienceContent}>
                 <h3 className={styles.experienceTitle}>
-                  Senior Engineer · Another Company
-                  <svg className={styles.externalLink} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  Web Developer · Blu Decimal
                 </h3>
                 <p className={styles.experienceDescription}>
-                  Delivered technical solutions and led projects for clients such as
-                  Apple, Uber, Nike, and Google. Developed and maintained code for
-                  client websites primarily using HTML, CSS, Sass, JavaScript, and jQuery.
+                  Collaborated with clients to gather requirements, define project scope, and deliver customized web solutions. 
+                  Wrote clean, maintainable, and scalable code using HTML, CSS, JavaScript, and frameworks like React. 
+                  Offered ongoing website maintenance, updates, and technical support.
                 </p>
                 <div className={styles.techTags}>
+                  <span className={styles.tag}>React</span>
                   <span className={styles.tag}>JavaScript</span>
-                  <span className={styles.tag}>jQuery</span>
                   <span className={styles.tag}>HTML & CSS</span>
-                  <span className={styles.tag}>Wordpress</span>
+                  <span className={styles.tag}>Web Development</span>
                 </div>
               </div>
             </div>
@@ -204,9 +204,9 @@ export default function Home() {
 
           {/* Projects Section */}
           <section id="projects" className={styles.section}>
-            <div className={styles.projectItem}>
+            <a href="/projects/inventory-management" className={styles.projectItem}>
               <div className={styles.projectImage}>
-                <img src="https://via.placeholder.com/200x100/233554/64ffda?text=Project" alt="Inventory Management System" />
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&h=200&fit=crop" alt="Inventory Management System" />
               </div>
               <div className={styles.projectContent}>
                 <h3 className={styles.projectTitle}>
@@ -223,11 +223,11 @@ export default function Home() {
                   <span className={styles.tag}>REST API</span>
                 </div>
               </div>
-            </div>
+            </a>
 
-            <div className={styles.projectItem}>
+            <a href="/projects/shelf-scanning" className={styles.projectItem}>
               <div className={styles.projectImage}>
-                <img src="https://via.placeholder.com/200x100/233554/64ffda?text=Project" alt="Shelf Scanning Application" />
+                <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=400&h=200&fit=crop" alt="Shelf Scanning Application" />
               </div>
               <div className={styles.projectContent}>
                 <h3 className={styles.projectTitle}>
@@ -244,11 +244,11 @@ export default function Home() {
                   <span className={styles.tag}>Node.js</span>
                 </div>
               </div>
-            </div>
+            </a>
 
-            <div className={styles.projectItem}>
+            <a href="/projects/price-checker" className={styles.projectItem}>
               <div className={styles.projectImage}>
-                <img src="https://via.placeholder.com/200x100/233554/64ffda?text=Project" alt="Price Checker App" />
+                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=200&fit=crop" alt="Price Checker App" />
               </div>
               <div className={styles.projectContent}>
                 <h3 className={styles.projectTitle}>
@@ -265,7 +265,7 @@ export default function Home() {
                   <span className={styles.tag}>GraphQL</span>
                 </div>
               </div>
-            </div>
+            </a>
 
             <a href="/projects" className={styles.viewMoreLink}>
               View Full Project Archive
