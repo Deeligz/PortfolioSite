@@ -6,6 +6,14 @@ import styles from "./page.module.css";
 export default function Home() {
   const [activeSection, setActiveSection] = useState('about');
 
+  // Scroll to top on page load
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    if (window.location.hash) {
+      window.history.replaceState(null, '', window.location.pathname);
+    }
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['about', 'experience', 'projects', 'blog'];
