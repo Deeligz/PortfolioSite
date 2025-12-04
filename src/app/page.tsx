@@ -138,7 +138,7 @@ export default function Home() {
           {/* About Section */}
           <section id="about" className={styles.section}>
             <p className={styles.bioText}>
-              As a software engineer, I specialize in building scalable mobile applications that solve real business challenges. I focus on creating solutions that are not only technically sound but also drive tangible results for organizations and their users.
+              As a software engineer, I specialize in building scalable mobile desktop and web applications that solve real business challenges. I focus on creating solutions that are not only technically sound but also drive tangible results for organizations and their users.
             </p>
             <p className={styles.bioText}>
               My expertise spans the full mobile development lifecycle, from architecture and implementation to deployment and optimization. I&apos;m particularly drawn to projects where <span className={styles.highlight}>innovation meets practicality</span>, delivering software that teams can rely on and businesses can grow with.
