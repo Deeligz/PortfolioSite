@@ -81,7 +81,7 @@ export default function Home() {
         <div className={styles.sidebarContent}>
           <div className={styles.header}>
             <h1 className={styles.name}>Daniel Oyieke</h1>
-            <h2 className={styles.title}>AI-focused Software Engineer</h2>
+            <h2 className={styles.title}>Software Engineer</h2>
             <p className={styles.tagline}>
               I build AI-powered enterprise applications that deliver measurable business impact.
             </p>
