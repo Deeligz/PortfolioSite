@@ -6,11 +6,21 @@ import styles from "./page.module.css";
 export default function Home() {
   const [activeSection, setActiveSection] = useState('about');
 
-  // Scroll to top on page load
+  // Handle scroll on page load - scroll to section if hash exists, otherwise scroll to top
   useEffect(() => {
-    window.scrollTo(0, 0);
-    if (window.location.hash) {
-      window.history.replaceState(null, '', window.location.pathname);
+    const hash = window.location.hash;
+    if (hash) {
+      // If there's a hash, scroll to that section
+      const sectionId = hash.replace('#', '');
+      const element = document.getElementById(sectionId);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    } else {
+      // No hash, scroll to top
+      window.scrollTo(0, 0);
     }
   }, []);
 
