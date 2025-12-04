@@ -101,7 +101,7 @@
 
 /* Hero Image */
 .heroImage {
-  margin: 0 -24px 40px;
+  margin: 0 0 40px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -221,8 +221,8 @@
   }
 
   .heroImage {
-    margin: 0 -20px 32px;
-    border-radius: 0;
+    margin: 0 0 32px;
+    border-radius: 8px;
   }
 
   .content {

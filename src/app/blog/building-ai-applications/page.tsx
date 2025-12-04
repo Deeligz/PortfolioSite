@@ -105,12 +105,6 @@ export default function BlogPost() {
         </div>
 
         <div className={styles.content}>
-          <p className={styles.lead}>
-            Artificial Intelligence is no longer a futuristic concept—it&apos;s a practical tool that&apos;s 
-            transforming how we build software. In this article, I&apos;ll share insights from my experience 
-            building AI-powered enterprise applications that deliver real business value.
-          </p>
-
           <h2>The Rise of Intelligent Applications</h2>
           <p>
             Over the past few years, we&apos;ve witnessed a remarkable shift in software development. 
