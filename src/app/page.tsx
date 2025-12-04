@@ -3,6 +3,13 @@
 import { useState, useEffect } from 'react';
 import styles from "./page.module.css";
 
+/* ============================================================
+   🔒 COMING SOON TOGGLE
+   Set to 'false' to reveal Projects and Blog sections
+   Set to 'true' to blur them with "Coming Soon" overlay
+   ============================================================ */
+const COMING_SOON_ENABLED = true;
+
 export default function Home() {
   const [activeSection, setActiveSection] = useState('about');
 
@@ -231,12 +238,12 @@ export default function Home() {
             </a>
           </section>
 
-          {/* Projects Section - Coming Soon */}
+          {/* Projects Section */}
           <section id="projects" className={styles.section}>
-            <div className={styles.comingSoonWrapper}>
-              <div className={styles.comingSoonContent}>
-                {/* Actual Project Items (blurred behind) */}
-                <div className={styles.projectItem}>
+            <div className={COMING_SOON_ENABLED ? styles.comingSoonWrapper : undefined}>
+              <div className={COMING_SOON_ENABLED ? styles.comingSoonContent : undefined}>
+                
+                <a href={COMING_SOON_ENABLED ? undefined : "/projects/inventory-management"} className={styles.projectItem}>
                   <div className={styles.projectImage}>
                     <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&h=200&fit=crop" alt="Inventory Management System" />
                   </div>
@@ -251,9 +258,9 @@ export default function Home() {
                       <span className={styles.tag}>SQLite</span>
                     </div>
                   </div>
-                </div>
+                </a>
 
-                <div className={styles.projectItem}>
+                <a href={COMING_SOON_ENABLED ? undefined : "/projects/shelf-scanning"} className={styles.projectItem}>
                   <div className={styles.projectImage}>
                     <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=400&h=200&fit=crop" alt="Shelf Scanning Application" />
                   </div>
@@ -268,9 +275,9 @@ export default function Home() {
                       <span className={styles.tag}>Azure</span>
                     </div>
                   </div>
-                </div>
+                </a>
 
-                <div className={styles.projectItem}>
+                <a href={COMING_SOON_ENABLED ? undefined : "/projects/price-checker"} className={styles.projectItem}>
                   <div className={styles.projectImage}>
                     <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=200&fit=crop" alt="Price Checker App" />
                   </div>
@@ -285,9 +292,9 @@ export default function Home() {
                       <span className={styles.tag}>GraphQL</span>
                     </div>
                   </div>
-                </div>
+                </a>
 
-                <div className={styles.projectItem}>
+                <a href={COMING_SOON_ENABLED ? undefined : "/projects/intranet-site"} className={styles.projectItem}>
                   <div className={styles.projectImage}>
                     <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop" alt="Intranet Site" />
                   </div>
@@ -302,34 +309,40 @@ export default function Home() {
                       <span className={styles.tag}>SQL Server</span>
                     </div>
                   </div>
-                </div>
+                </a>
+
               </div>
               
-              {/* Translucent Overlay */}
-              <div className={styles.comingSoonOverlay}>
-                <span className={styles.comingSoonBadge}>Coming Soon</span>
-              </div>
+              {/* Coming Soon Overlay - only shown when COMING_SOON_ENABLED is true */}
+              {COMING_SOON_ENABLED && (
+                <div className={styles.comingSoonOverlay}>
+                  <span className={styles.comingSoonBadge}>Coming Soon</span>
+                </div>
+              )}
             </div>
           </section>
 
-          {/* Blog Section - Coming Soon */}
+          {/* Blog Section */}
           <section id="blog" className={styles.section}>
-            <div className={styles.comingSoonWrapper}>
-              <div className={styles.comingSoonContent}>
-                {/* Actual Blog Item (blurred behind) */}
-                <div className={styles.blogItem}>
+            <div className={COMING_SOON_ENABLED ? styles.comingSoonWrapper : undefined}>
+              <div className={COMING_SOON_ENABLED ? styles.comingSoonContent : undefined}>
+                
+                <a href={COMING_SOON_ENABLED ? undefined : "/blog/building-ai-applications"} className={styles.blogItem}>
                   <span className={styles.blogDate}>December 2024</span>
                   <h3 className={styles.blogTitle}>Building AI-Powered Applications: A Practical Guide</h3>
                   <p className={styles.blogDescription}>
                     Insights from building AI-powered enterprise applications that deliver real business value.
                   </p>
-                </div>
+                </a>
+
               </div>
               
-              {/* Translucent Overlay */}
-              <div className={styles.comingSoonOverlay}>
-                <span className={styles.comingSoonBadge}>Coming Soon</span>
-              </div>
+              {/* Coming Soon Overlay - only shown when COMING_SOON_ENABLED is true */}
+              {COMING_SOON_ENABLED && (
+                <div className={styles.comingSoonOverlay}>
+                  <span className={styles.comingSoonBadge}>Coming Soon</span>
+                </div>
+              )}
             </div>
           </section>
 

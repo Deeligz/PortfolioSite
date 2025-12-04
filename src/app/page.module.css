@@ -435,7 +435,8 @@
 }
 
 /* ============================================
-   COMING SOON / TRANSLUCENT OVERLAY STYLES
+   COMING SOON STYLES
+   Controlled by COMING_SOON_ENABLED in page.tsx
    ============================================ */
 
 .comingSoonWrapper {
