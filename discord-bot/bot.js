@@ -43,6 +43,7 @@ const WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL;
 
 // Track conversations and their message counts
 const conversationMessageCounts = new Map();
+const processedMessageIds = new Set(); // Track processed messages to prevent duplicates
 let lastConversationId = null;
 let discordChannel = null;
 
@@ -88,20 +89,23 @@ function watchFirebase() {
       const previousCount = conversationMessageCounts.get(convId) || 0;
 
       // Check for new messages
-      if (currentCount > previousCount) {
-        // Get the new messages
-        const newMessages = messages.slice(previousCount);
+      for (const [msgId, msgData] of messages) {
+        const uniqueId = `${convId}-${msgId}`;
         
-        for (const [msgId, msgData] of newMessages) {
-          // Only notify for visitor messages
-          if (msgData.sender === 'visitor') {
-            await notifyDiscord(convId, msgData.text);
-            lastConversationId = convId;
-          }
+        // Skip if already processed
+        if (processedMessageIds.has(uniqueId)) continue;
+        
+        // Mark as processed
+        processedMessageIds.add(uniqueId);
+        
+        // Only notify for visitor messages
+        if (msgData.sender === 'visitor') {
+          await notifyDiscord(convId, msgData.text);
+          lastConversationId = convId;
         }
       }
 
-      conversationMessageCounts.set(convId, currentCount);
+      conversationMessageCounts.set(convId, messages.length);
     }
   });
 
