@@ -146,11 +146,18 @@ async function notifyDiscord(conversationId, message) {
   }
 }
 
+// Track processed Discord message IDs to prevent duplicates
+const processedDiscordMessages = new Set();
+
 client.on('messageCreate', async (message) => {
   // Ignore bot messages and messages from other channels
   if (message.channel.id !== CHANNEL_ID) return;
   if (message.author.bot) return;
   if (message.webhookId) return;
+
+  // Prevent duplicate processing
+  if (processedDiscordMessages.has(message.id)) return;
+  processedDiscordMessages.add(message.id);
 
   // This is your reply!
   const replyText = message.content.trim();
