@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import ChatWidget from "@/components/ChatWidget/ChatWidget";
 
 export const metadata: Metadata = {
   title: "Daniel Oyieke - AI Software Engineer | AI-Powered Desktop, Mobile & Web Applications",
@@ -144,6 +145,7 @@ export default function RootLayout({
       <body>
         <div className="topBlurBar"></div>
         {children}
+        <ChatWidget />
       </body>
     </html>
   );
