@@ -495,6 +495,21 @@
   font-size: 13px;
   color: var(--text-muted);
   line-height: 1.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.floridaIcon {
+  width: 18px;
+  height: 18px;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.floridaIcon:hover {
+  opacity: 1;
 }
 
 /* ============================================
