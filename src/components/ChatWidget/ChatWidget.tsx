@@ -184,16 +184,7 @@ export default function ChatWidget() {
         }, 1500);
       }
 
-      // Notify via Discord
-      await fetch("/api/chat/notify", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          type: "new_message",
-          conversationId,
-          message: messageText,
-        }),
-      });
+      // Discord bot watches Firebase and will notify automatically
     } catch (error) {
       console.error("Failed to send message:", error);
     } finally {
