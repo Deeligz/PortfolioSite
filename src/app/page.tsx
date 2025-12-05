@@ -350,7 +350,7 @@ export default function Home() {
             <p>
               <img src="/florida.svg" alt="Florida" className={styles.floridaIcon} />
               © {new Date().getFullYear()}
-              <img src="/florida.svg" alt="Florida" className={styles.floridaIcon} />
+              
             </p>
           </footer>
         </div>
