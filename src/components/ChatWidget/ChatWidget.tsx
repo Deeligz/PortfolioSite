@@ -1,12 +1,40 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { database } from "@/lib/firebase";
 import { ref, push, onValue, set } from "firebase/database";
 import styles from "./ChatWidget.module.css";
 
 // Check if Firebase is available
 const isFirebaseEnabled = Boolean(database);
+
+// Play notification sound
+const playNotificationSound = () => {
+  try {
+    const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+    const oscillator = audioContext.createOscillator();
+    const gainNode = audioContext.createGain();
+    
+    oscillator.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+    
+    // Pleasant ping sound
+    oscillator.frequency.setValueAtTime(830, audioContext.currentTime); // Starting frequency
+    oscillator.frequency.exponentialRampToValueAtTime(600, audioContext.currentTime + 0.1);
+    
+    oscillator.type = 'sine';
+    
+    // Fade out
+    gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+    
+    oscillator.start(audioContext.currentTime);
+    oscillator.stop(audioContext.currentTime + 0.3);
+  } catch (e) {
+    // Audio not supported or blocked
+    console.log('Could not play notification sound');
+  }
+};
 
 interface Message {
   id: string;
@@ -131,9 +159,14 @@ export default function ChatWidget() {
         // Check if there's a new message from Daniel
         if (messageList.length > lastMessageCount.current) {
           const lastMessage = messageList[messageList.length - 1];
-          if (lastMessage.sender === "daniel" && !isOpen) {
-            setHasNewMessage(true);
-            setShowNotification(true);
+          if (lastMessage.sender === "daniel") {
+            // Play notification sound
+            playNotificationSound();
+            
+            if (!isOpen) {
+              setHasNewMessage(true);
+              setShowNotification(true);
+            }
           }
         }
         lastMessageCount.current = messageList.length;
