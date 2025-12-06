@@ -23,14 +23,15 @@
 }
 
 .modal {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: 16px;
   padding: 32px;
   width: 90%;
   max-width: 400px;
   position: relative;
   animation: slideUp 0.3s ease;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 @keyframes slideUp {
@@ -50,7 +51,7 @@
   right: 16px;
   background: none;
   border: none;
-  color: var(--text-muted);
+  color: #94a3b8;
   cursor: pointer;
   padding: 4px;
   display: flex;
@@ -60,7 +61,7 @@
 }
 
 .closeButton:hover {
-  color: var(--text-primary);
+  color: #1e293b;
 }
 
 .header {
@@ -71,13 +72,13 @@
 .header h3 {
   font-size: 24px;
   font-weight: 600;
-  color: var(--text-primary);
+  color: #1e293b;
   margin: 0 0 8px;
 }
 
 .header p {
   font-size: 14px;
-  color: var(--text-secondary);
+  color: #64748b;
   margin: 0;
 }
 
@@ -91,21 +92,21 @@
   width: 100%;
   padding: 14px 16px;
   font-size: 16px;
-  border: 1px solid var(--border);
+  border: 1px solid #e2e8f0;
   border-radius: 8px;
-  background: var(--bg-primary);
-  color: var(--text-primary);
+  background: #f8fafc;
+  color: #1e293b;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .input:focus {
   outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.1);
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
 }
 
 .input::placeholder {
-  color: var(--text-muted);
+  color: #94a3b8;
 }
 
 .input:disabled {
@@ -121,17 +122,18 @@
   padding: 14px 24px;
   font-size: 16px;
   font-weight: 500;
-  color: var(--bg-primary);
-  background: var(--accent);
+  color: #ffffff;
+  background: #3b82f6;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .submitButton:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(100, 255, 218, 0.3);
+  background: #2563eb;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
 }
 
 .submitButton:disabled {
@@ -164,7 +166,7 @@
 
 .disclaimer {
   font-size: 12px;
-  color: var(--text-muted);
+  color: #94a3b8;
   text-align: center;
   margin: 16px 0 0;
 }
@@ -178,24 +180,24 @@
 }
 
 .successMessage svg {
-  color: var(--accent);
+  color: #22c55e;
   margin-bottom: 16px;
 }
 
 .successMessage h3 {
   font-size: 24px;
   font-weight: 600;
-  color: var(--text-primary);
+  color: #1e293b;
   margin: 0 0 8px;
 }
 
 .successMessage p {
   font-size: 14px;
-  color: var(--text-secondary);
+  color: #64748b;
   margin: 0;
 }
 
 .successMessage strong {
-  color: var(--accent);
+  color: #3b82f6;
 }
 
