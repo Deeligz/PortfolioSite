@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.danieloyieke.com/sitemap.xml
+Sitemap: https://www.danieloyieke.dev/sitemap.xml
