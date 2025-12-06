@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import styles from "./page.module.css";
+import ResumeModal from "@/components/ResumeModal/ResumeModal";
 
 /* ============================================================
    🔒 COMING SOON TOGGLE
@@ -12,6 +13,7 @@ const COMING_SOON_ENABLED = true;
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState('about');
+  const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
 
   // Handle scroll on page load - scroll to section if coming from a subpage, otherwise scroll to top
   useEffect(() => {
@@ -232,10 +234,10 @@ export default function Home() {
               </div>
             </div>
 
-            <a href="/resume.pdf" className={styles.resumeLink} target="_blank" rel="noopener noreferrer">
+            <button onClick={() => setIsResumeModalOpen(true)} className={styles.resumeLink}>
               View Full Résumé
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
+            </button>
           </section>
 
           {/* Projects Section */}
@@ -350,11 +352,17 @@ export default function Home() {
             <p>
               <img src="/florida.svg" alt="Florida" className={styles.floridaIcon} />
               © {new Date().getFullYear()}
-              
+               
             </p>
           </footer>
         </div>
       </main>
+
+      {/* Resume Email Modal */}
+      <ResumeModal 
+        isOpen={isResumeModalOpen} 
+        onClose={() => setIsResumeModalOpen(false)} 
+      />
     </div>
   );
 }
