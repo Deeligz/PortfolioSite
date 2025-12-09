@@ -23,7 +23,7 @@ export default function InventoryManagementProject() {
 
       <article className={styles.article}>
         <header className={styles.header}>
-          <span className={styles.category}>Enterprise Mobile App</span>
+          <span className={styles.category}>Enterprise Web App</span>
           <h1 className={styles.title}>Stock Management System</h1>
         </header>
 
@@ -43,7 +43,8 @@ export default function InventoryManagementProject() {
             a robust system using React for the frontend interface, coupled with a .NET API backend and Azure
             SQL Database for reliable data management. This system empowers store associates to efficiently
             track stock levels, identify expiring products, and make informed decisions to reduce waste and
-            optimize inventory turnover.
+            optimize inventory turnover, ultimately contributing to millions of dollars in waste reduction
+            savings for the company.
           </p>
 
           <div className={styles.tags}>

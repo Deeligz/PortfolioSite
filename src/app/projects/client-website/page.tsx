@@ -55,7 +55,7 @@ export default function ClientWebsiteProject() {
           <p>
             This custom website was built for a client to establish their online presence and
             showcase their services. The site utilizes Next.js on the frontend with WordPress as a
-            headless CMS for content management, creating a professional digital storefront that
+            headless CMS for content management, delivering a polished web experience that
             effectively communicates the client&apos;s value proposition. This architecture combines
             modern frontend performance with the familiar content editing experience of WordPress.
           </p>

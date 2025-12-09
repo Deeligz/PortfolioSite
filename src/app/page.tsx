@@ -16,30 +16,32 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState('about');
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
 
-  // Handle scroll on page load - scroll to section if coming from a subpage, otherwise scroll to top
+  // Handle scroll on page load and hash changes
   useEffect(() => {
-    const hash = window.location.hash;
-    const referrer = document.referrer;
-    const isFromSubpage = referrer && (referrer.includes('/projects/') || referrer.includes('/blog/'));
-    
-    if (hash && isFromSubpage) {
-      // Coming from a subpage with hash - scroll to that section
-      const sectionId = hash.replace('#', '');
-      const element = document.getElementById(sectionId);
-      if (element) {
-        setTimeout(() => {
-          element.scrollIntoView({ behavior: 'smooth' });
-          // Clear the hash from URL after scrolling
-          window.history.replaceState(null, '', window.location.pathname);
-        }, 100);
-      }
-    } else {
-      // Direct visit or refresh - scroll to top and clear hash
-      window.scrollTo(0, 0);
+    const handleHashNavigation = () => {
+      const hash = window.location.hash;
+
       if (hash) {
-        window.history.replaceState(null, '', window.location.pathname);
+        // Scroll to the section specified by the hash
+        const sectionId = hash.replace('#', '');
+        const element = document.getElementById(sectionId);
+        if (element) {
+          setTimeout(() => {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }, 100);
+        }
       }
-    }
+    };
+
+    // Handle initial load
+    handleHashNavigation();
+
+    // Listen for hash changes (for client-side navigation)
+    window.addEventListener('hashchange', handleHashNavigation);
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashNavigation);
+    };
   }, []);
 
   useEffect(() => {
@@ -148,7 +150,7 @@ export default function Home() {
           {/* About Section */}
           <section id="about" className={styles.section}>
             <p className={styles.bioText}>
-              As a software engineer, I specialize in building scalable web mobile desktop and applications that solve real business challenges. I focus on creating solutions that are not only technically sound but also drive tangible results for organizations and their users.
+              As a software engineer, I specialize in building scalable web, mobile, and desktop applications that solve real business challenges. I focus on creating solutions that are not only technically sound but also drive tangible results for organizations and their users.
             </p>
             <p className={styles.bioText}>
               My expertise spans the full application development lifecycle, from design to implementation to deployment and optimization. I strive to build and deliver software that teams can rely on that is <span className={styles.highlight}>clean, minimal</span> and easy to use.
@@ -271,7 +273,7 @@ export default function Home() {
                   <div className={styles.projectContent}>
                     <h3 className={styles.projectTitle}>Look Within U</h3>
                     <p className={styles.projectDescription}>
-                      Static website showcasing their services and brand.
+                      Modern website showcasing their services and brand.
                     </p>
                     <div className={styles.techTags}>
                       <span className={styles.tag}>React</span>
