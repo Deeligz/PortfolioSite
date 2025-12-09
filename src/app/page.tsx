@@ -18,30 +18,26 @@ export default function Home() {
 
   // Handle scroll on page load and hash changes
   useEffect(() => {
-    const handleHashNavigation = () => {
-      const hash = window.location.hash;
+    // Check if there's a hash on load
+    const hash = window.location.hash;
 
-      if (hash) {
-        // Scroll to the section specified by the hash
-        const sectionId = hash.replace('#', '');
-        const element = document.getElementById(sectionId);
-        if (element) {
+    if (hash) {
+      // Scroll to the section specified by the hash
+      const sectionId = hash.replace('#', '');
+      const element = document.getElementById(sectionId);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+          // Clear hash after scrolling to prevent it from persisting on refresh
           setTimeout(() => {
-            element.scrollIntoView({ behavior: 'smooth' });
-          }, 100);
-        }
+            window.history.replaceState(null, '', window.location.pathname);
+          }, 300);
+        }, 100);
       }
-    };
-
-    // Handle initial load
-    handleHashNavigation();
-
-    // Listen for hash changes (for client-side navigation)
-    window.addEventListener('hashchange', handleHashNavigation);
-
-    return () => {
-      window.removeEventListener('hashchange', handleHashNavigation);
-    };
+    } else {
+      // No hash - ensure we're at the top
+      window.scrollTo(0, 0);
+    }
   }, []);
 
   useEffect(() => {
