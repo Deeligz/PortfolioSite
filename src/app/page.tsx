@@ -283,6 +283,23 @@ export default function Home() {
                   </div>
                 </a>
 
+                <a href={PROJECTS_COMING_SOON ? undefined : "/projects/portfolio-site"} className={styles.projectItem}>
+                  <div className={styles.projectImage}>
+                    <img src="/Portfolio.png" alt="Portfolio Site" />
+                  </div>
+                  <div className={styles.projectContent}>
+                    <h3 className={styles.projectTitle}>Portfolio Site</h3>
+                    <p className={styles.projectDescription}>
+                      Personal portfolio website built from scratch with minimalist design.
+                    </p>
+                    <div className={styles.techTags}>
+                      <span className={styles.tag}>React</span>
+                      <span className={styles.tag}>Next.js</span>
+                      <span className={styles.tag}>TypeScript</span>
+                    </div>
+                  </div>
+                </a>
+
               </div>
 
               {/* Coming Soon Overlay - only shown when PROJECTS_COMING_SOON is true */}
