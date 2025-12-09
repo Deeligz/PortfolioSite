@@ -333,7 +333,7 @@
 
 .projectImage img {
   width: 100%;
-  height: auto;
+  height: 120px;
   display: block;
   object-fit: cover;
 }

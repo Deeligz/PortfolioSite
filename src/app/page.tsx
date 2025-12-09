@@ -6,10 +6,11 @@ import ResumeModal from "@/components/ResumeModal/ResumeModal";
 
 /* ============================================================
    🔒 COMING SOON TOGGLE
-   Set to 'false' to reveal Projects and Blog sections
+   Set to 'false' to reveal sections
    Set to 'true' to blur them with "Coming Soon" overlay
    ============================================================ */
-const COMING_SOON_ENABLED = true;
+const PROJECTS_COMING_SOON = false;
+const BLOG_COMING_SOON = true;
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState('about');
@@ -147,7 +148,7 @@ export default function Home() {
           {/* About Section */}
           <section id="about" className={styles.section}>
             <p className={styles.bioText}>
-              As a software engineer, I specialize in building scalable mobile desktop and web applications  that solve real business challenges. I focus on creating solutions that are not only technically sound but also drive tangible results for organizations and their users.
+              As a software engineer, I specialize in building scalable web mobile desktop and applications that solve real business challenges. I focus on creating solutions that are not only technically sound but also drive tangible results for organizations and their users.
             </p>
             <p className={styles.bioText}>
               My expertise spans the full application development lifecycle, from design to implementation to deployment and optimization. I strive to build and deliver software that teams can rely on that is <span className={styles.highlight}>clean, minimal</span> and easy to use.
@@ -168,7 +169,8 @@ export default function Home() {
                   Software Engineer 2 · Southeastern Grocers
                 </h3>
                 <ul className={styles.experienceDescription}>
-                  <li>Responsible for building and maintaining AI-driven applications utilizing Azure AI Foundry that is used by store associates to increase productivity and efficiency.</li>
+                <li>Responsible for building a Stock management  Web  application using React and C# .NET api and MSSQL Database</li>
+                  <li>Responsible for building Web AI Chatbot application using React Python and azure ai foundry.</li>     
                   <li>Develop, test, and maintain cross-platform mobile and desktop applications using C# and .NET MAUI.</li>
                   <li>Build and maintain efficient back-end services and APIs using .NET technologies.</li>
                   <li>Debug and resolve issues in C# .NET MAUI applications, ensuring optimal performance across platforms.</li>
@@ -242,81 +244,47 @@ export default function Home() {
 
           {/* Projects Section */}
           <section id="projects" className={styles.section}>
-            <div className={COMING_SOON_ENABLED ? styles.comingSoonWrapper : undefined}>
-              <div className={COMING_SOON_ENABLED ? styles.comingSoonContent : undefined}>
-                
-                <a href={COMING_SOON_ENABLED ? undefined : "/projects/inventory-management"} className={styles.projectItem}>
-                  <div className={styles.projectImage}>
-                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&h=200&fit=crop" alt="Inventory Management System" />
-                  </div>
-                  <div className={styles.projectContent}>
-                    <h3 className={styles.projectTitle}>Inventory Management System</h3>
-                    <p className={styles.projectDescription}>
-                      Enterprise mobile application for real-time inventory tracking and management.
-                    </p>
-                    <div className={styles.techTags}>
-                      <span className={styles.tag}>React Native</span>
-                      <span className={styles.tag}>TypeScript</span>
-                      <span className={styles.tag}>SQLite</span>
-                    </div>
-                  </div>
-                </a>
+            <div className={PROJECTS_COMING_SOON ? styles.comingSoonWrapper : undefined}>
+              <div className={PROJECTS_COMING_SOON ? styles.comingSoonContent : undefined}>
 
-                <a href={COMING_SOON_ENABLED ? undefined : "/projects/shelf-scanning"} className={styles.projectItem}>
+                <a href={PROJECTS_COMING_SOON ? undefined : "/projects/inventory-management"} className={styles.projectItem}>
                   <div className={styles.projectImage}>
-                    <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=400&h=200&fit=crop" alt="Shelf Scanning Application" />
+                    <img src="/inventory.jpg" alt="Stock Management System" />
                   </div>
                   <div className={styles.projectContent}>
-                    <h3 className={styles.projectTitle}>Shelf Scanning Application</h3>
+                    <h3 className={styles.projectTitle}>Stock Management System</h3>
                     <p className={styles.projectDescription}>
-                      Mobile solution for retail shelf auditing and compliance checks.
-                    </p>
-                    <div className={styles.techTags}>
-                      <span className={styles.tag}>React Native</span>
-                      <span className={styles.tag}>Computer Vision</span>
-                      <span className={styles.tag}>Azure</span>
-                    </div>
-                  </div>
-                </a>
-
-                <a href={COMING_SOON_ENABLED ? undefined : "/projects/price-checker"} className={styles.projectItem}>
-                  <div className={styles.projectImage}>
-                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=200&fit=crop" alt="Price Checker App" />
-                  </div>
-                  <div className={styles.projectContent}>
-                    <h3 className={styles.projectTitle}>Price Checker App</h3>
-                    <p className={styles.projectDescription}>
-                      Customer-facing mobile app enabling instant price verification.
-                    </p>
-                    <div className={styles.techTags}>
-                      <span className={styles.tag}>React Native</span>
-                      <span className={styles.tag}>Firebase</span>
-                      <span className={styles.tag}>GraphQL</span>
-                    </div>
-                  </div>
-                </a>
-
-                <a href={COMING_SOON_ENABLED ? undefined : "/projects/intranet-site"} className={styles.projectItem}>
-                  <div className={styles.projectImage}>
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop" alt="Intranet Site" />
-                  </div>
-                  <div className={styles.projectContent}>
-                    <h3 className={styles.projectTitle}>Intranet Site</h3>
-                    <p className={styles.projectDescription}>
-                      Internal company portal for centralized access to resources.
+                      Enterprise inventory application built for tracking shelfs.
                     </p>
                     <div className={styles.techTags}>
                       <span className={styles.tag}>React</span>
-                      <span className={styles.tag}>.NET</span>
-                      <span className={styles.tag}>SQL Server</span>
+                      <span className={styles.tag}>.NET API</span>
+                      <span className={styles.tag}>MsSQL</span>
+                    </div>
+                  </div>
+                </a>
+
+                <a href={PROJECTS_COMING_SOON ? undefined : "/projects/client-website"} className={styles.projectItem}>
+                  <div className={styles.projectImage}>
+                    <img src="/LookWithin.png" alt="Look Within U" />
+                  </div>
+                  <div className={styles.projectContent}>
+                    <h3 className={styles.projectTitle}>Look Within U</h3>
+                    <p className={styles.projectDescription}>
+                      Static website showcasing their services and brand.
+                    </p>
+                    <div className={styles.techTags}>
+                      <span className={styles.tag}>React</span>
+                      <span className={styles.tag}>WordPress</span>
+                      <span className={styles.tag}>CSS</span>
                     </div>
                   </div>
                 </a>
 
               </div>
-              
-              {/* Coming Soon Overlay - only shown when COMING_SOON_ENABLED is true */}
-              {COMING_SOON_ENABLED && (
+
+              {/* Coming Soon Overlay - only shown when PROJECTS_COMING_SOON is true */}
+              {PROJECTS_COMING_SOON && (
                 <div className={styles.comingSoonOverlay}>
                   <span className={styles.comingSoonBadge}>Coming Soon</span>
                 </div>
@@ -326,10 +294,10 @@ export default function Home() {
 
           {/* Blog Section */}
           <section id="blog" className={styles.section}>
-            <div className={COMING_SOON_ENABLED ? styles.comingSoonWrapper : undefined}>
-              <div className={COMING_SOON_ENABLED ? styles.comingSoonContent : undefined}>
-                
-                <a href={COMING_SOON_ENABLED ? undefined : "/blog/building-ai-applications"} className={styles.blogItem}>
+            <div className={BLOG_COMING_SOON ? styles.comingSoonWrapper : undefined}>
+              <div className={BLOG_COMING_SOON ? styles.comingSoonContent : undefined}>
+
+                <a href={BLOG_COMING_SOON ? undefined : "/blog/building-ai-applications"} className={styles.blogItem}>
                   <span className={styles.blogDate}>December 2024</span>
                   <h3 className={styles.blogTitle}>Building AI-Powered Applications: A Practical Guide</h3>
                   <p className={styles.blogDescription}>
@@ -338,9 +306,9 @@ export default function Home() {
                 </a>
 
               </div>
-              
-              {/* Coming Soon Overlay - only shown when COMING_SOON_ENABLED is true */}
-              {COMING_SOON_ENABLED && (
+
+              {/* Coming Soon Overlay - only shown when BLOG_COMING_SOON is true */}
+              {BLOG_COMING_SOON && (
                 <div className={styles.comingSoonOverlay}>
                   <span className={styles.comingSoonBadge}>Coming Soon</span>
                 </div>

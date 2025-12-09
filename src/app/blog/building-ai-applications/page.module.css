@@ -115,6 +115,27 @@
   object-fit: cover;
 }
 
+/* Live Site Button */
+.liveButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: transparent;
+  color: var(--text-primary);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.liveButton:hover {
+  transform: translateY(-2px);
+  border-color: var(--text-primary);
+  background-color: var(--accent-tint);
+}
+
 /* Content */
 .content {
   font-size: 17px;
