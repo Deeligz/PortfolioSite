@@ -296,6 +296,23 @@ export default function Home() {
                   </div>
                 </a>
 
+                <a href={PROJECTS_COMING_SOON ? undefined : "/projects/church-management-api"} className={styles.projectItem}>
+                  <div className={styles.projectImage}>
+                    <img src="/ChurchAPI.png" alt="Church Management System API" />
+                  </div>
+                  <div className={styles.projectContent}>
+                    <h3 className={styles.projectTitle}>Church Management System API</h3>
+                    <p className={styles.projectDescription}>
+                      RESTful API for managing church operations, members, and events.
+                    </p>
+                    <div className={styles.techTags}>
+                      <span className={styles.tag}>.NET</span>
+                      <span className={styles.tag}>C#</span>
+                      <span className={styles.tag}>REST API</span>
+                    </div>
+                  </div>
+                </a>
+
               </div>
 
               {/* Coming Soon Overlay - only shown when PROJECTS_COMING_SOON is true */}
