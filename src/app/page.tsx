@@ -279,6 +279,24 @@ export default function Home() {
                   </div>
                 </a>
 
+                <a href={PROJECTS_COMING_SOON ? undefined : "/projects/treasury-dashboard"} className={styles.projectItem}>
+                  <div className={styles.projectImage}>
+                    <img src="/ChurchDashboard.png" alt="Treasury Dashboard" />
+                  </div>
+                  <div className={styles.projectContent}>
+                    <h3 className={styles.projectTitle}>Treasury Dashboard</h3>
+                    <p className={styles.projectDescription}>
+                      Dashboard application for managing treasury operations and financial data.
+                    </p>
+                    <div className={styles.techTags}>
+                      <span className={styles.tag}>React</span>
+                      <span className={styles.tag}>.NET</span>
+                      <span className={styles.tag}>API</span>
+                      <span className={styles.tag}>MSSQL</span>
+                    </div>
+                  </div>
+                </a>
+
                 <a href={PROJECTS_COMING_SOON ? undefined : "/projects/client-website"} className={styles.projectItem}>
                   <div className={styles.projectImage}>
                     <img src="/LookWithin.png" alt="Look Within U" />
