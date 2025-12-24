@@ -3,7 +3,7 @@ import "./globals.css";
 import ChatWidget from "@/components/ChatWidget/ChatWidget";
 
 export const metadata: Metadata = {
-  title: "Daniel Oyieke - AI Software Engineer | AI-Powered Desktop, Mobile & Web Applications",
+  title: "Daniel Oyieke - Software Engineer | Web, Mobile and Desktop Applications",
   description: "Daniel Oyieke is an AI Software Engineer specializing in building AI-powered desktop, mobile, and web applications. Expert in machine learning integration, computer vision, React Native, TypeScript, and enterprise AI solutions that drive real business results.",
   keywords: [
     "AI Software Engineer",
