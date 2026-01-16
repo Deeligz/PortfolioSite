@@ -37,7 +37,7 @@ export default function TreasuryDashboardProject() {
         <div className={styles.content}>
           <div style={{ marginBottom: '2rem', textAlign: 'center' }}>
             <a 
-              href="https://treasurydashboard.azurewebsites.net" 
+              href="https://southpointsdatresury.org/signin" 
               target="_blank" 
               rel="noopener noreferrer"
               className={styles.liveButton}
